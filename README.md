@@ -1,5 +1,5 @@
-#ProjetoTCC
+# ProjetoTCC
+ 
+* Um repopsitório remoto de configuração do TCC
 
-*Um repopsitório remoto de configuração do TCC
-
-*Utilizar para adquirir prática
+* Utilizar para adquirir prática
