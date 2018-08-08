@@ -9,10 +9,17 @@
 <body>
 
 <?php
+require 'Controller.php';
+
+$controlar = new Controller();
+
+
 $servidorBD="localhost";
 $usuario="root";
 $senha="";
 $database="tcc";
+
+
 ?>
 
 <!--Avisos de Login-->
@@ -84,7 +91,8 @@ function aparecer(i) {
 <input type="submit" class="w3-btn w3-green button" value="Login"></p>
 </form>
 <?php
-  $conexao= mysqli_connect($servidorBD,$usuario,$senha,$database);
+ $controlar->logar();
+  /*$conexao= mysqli_connect($servidorBD,$usuario,$senha,$database);
 if(mysqli_connect_errno())
 {
 	echo "Erro na conexão:".mysql_connect_error();
@@ -147,6 +155,7 @@ if(empty($_REQUEST['tipo'])){}else{
 }
 }
 mysqli_close($conexao);
+*/
 ?>
 </div></div>
   </div>
@@ -223,8 +232,12 @@ Resultado
 <span onclick="sumir('resultado')" class="y3">x</span>
 <a name="pesquisar"></a>
   <ul class="w3-ul w3-card-4 w3-hoverable" style="margin-top:7px;cursor:pointer;text-align:left;">
-  <?php
-  $conexao= mysqli_connect($servidorBD,$usuario,$senha,$database);
+<?php
+
+
+$controlar->pesquisar();
+
+/*  $conexao= mysqli_connect($servidorBD,$usuario,$senha,$database);
 if(mysqli_connect_errno())
 {
 	echo "Erro na conexão:".mysql_connect_error();
@@ -263,6 +276,9 @@ echo "<script>aparecer('resultado')</script>";
 }
 }}
 mysqli_close($conexao);
+
+*/
+
 ?>
 <script>
 function redirecionar(c,p,e){
